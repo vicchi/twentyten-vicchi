@@ -1,0 +1,165 @@
+/*
+Theme Name: Twenty Ten - Vicchi
+Theme URI: http://www.vicchi.org/codeage/twentyten-vicchi/
+Description: Child theme for www.vicchi.org, extending the WordPress Twenty Ten theme
+Author: Gary Gale
+Author URI: http://www.garygale.com/
+Template: twentyten
+Version: 1.0.0
+License: GNU General Public License
+License URI: license.txt
+Tags: purple, white, two-columns, fixed-width, custom-header, custom-background, threaded-comments, sticky-post, translation-ready, microformats, rtl-language-support, editor-style, custom-menu
+*/
+
+@import url("../twentyten/style.css");
+
+body {
+	background: #FFFFFF;
+}
+
+p, div {
+	color: #555;
+}
+
+.aligncenter, div.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#header {
+	padding: 0 0 0 0;
+}
+
+#site-title {
+	width: 500px;
+	margin: 0 0 10px 0;
+}
+
+#site-description {
+	width: 400px;
+	margin: 0 0 10px 0;
+}
+
+a:link, a:visited {
+	color: #999;
+	text-decoration: none;
+	border-bottom: 1px solid #eee
+}
+
+a:hover {
+	color: #000;
+	border-bottom: 1px solid #EEE
+}
+
+#site-title {
+	font-size: 40px;
+}
+
+#site-title a, #site-title a:link {
+	color: #51518C;
+	border-bottom: none;
+}
+
+#site-title a:hover {
+	color: #6E6E8C;
+}
+
+#content h1, #content h2, #content h3, #content h4, #content h5, #content h6 {
+	font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+	color: #555;
+}
+
+#content .entry-title a, .entry-title a {
+	color: #51518C;
+	border-bottom: none;
+}
+
+#content .entry-title a:hover, .entry-title a:hover {
+	color: #6E6E8C;
+}
+
+#content .entry-title {
+	color: #51518C;
+	font-size: 30px;
+}
+
+#content .entry-content {
+	font-size: 18px;
+	line-height: 150%;
+}
+
+#content {
+	text-align: justify;
+}
+
+#content h2 {
+	padding: 0;
+}
+
+#content h2.entry-title {
+	clear: right;
+	padding-left: 50px;
+}
+
+.widget-area a:hover {
+	text-decoration: none;
+}
+
+small, .small {
+	font-family: Helvetica, Arial;
+}
+
+small {
+	font-size: 10px;
+	font-weight: bold;
+	color: #CCC;
+	padding: 6px 8px 5px 0px;
+	float: left;
+	text-transform: uppercase;
+	line-height: 1.1;
+}
+
+.small {
+	font-size: 12px;
+	color: #AAA;
+	margin-top: 10px;
+}
+
+.date {
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 0.8;
+	/*line-height: 0.8;*/
+	color: #51518C;
+}
+
+.widget-container {
+	font-size: 16px;
+	line-height: 150%;
+}
+
+#main .widget-area ul ul {
+	margin-left: 0;
+	list-style: none;
+}
+
+.widget-title {
+	color: #51518C;
+	font-size: 18px;
+	margin: 0 0 6px 0;
+}
+
+#branding img {
+	border-top: none;
+	border-bottom: none;
+}
+
+.credits, .geo {
+	font-size: 12px;
+}
+
+#site-info, #site-generator {
+	font-size: 9px;
+}
