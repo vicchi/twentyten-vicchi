@@ -1,4 +1,18 @@
 <?php
+
+/*
+Theme Name: Twenty Ten - Vicchi
+Theme URI: http://www.vicchi.org/codeage/twentyten-vicchi/
+Description: Child theme for www.vicchi.org, extending the WordPress Twenty Ten theme
+Author: Gary Gale
+Author URI: http://www.garygale.com/
+Template: twentyten
+Version: 1.0.0
+License: GNU General Public License
+License URI: license.txt
+Tags: purple, white, two-columns, fixed-width, custom-header, custom-background, threaded-comments, sticky-post, translation-ready, microformats, rtl-language-support, editor-style, custom-menu
+*/
+
 /**
  * The template for displaying the footer.
  *
