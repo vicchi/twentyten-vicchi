@@ -89,8 +89,6 @@ Tags: purple, white, two-columns, fixed-width, custom-header, custom-background,
 						echo get_the_post_thumbnail( $post->ID );
 					elseif ( get_header_image() ) : ?>
 						<img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
-					<?php else : ?>
-						<img src="/images/rotate.php" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
 					<?php endif; ?>
 			</div><!-- #branding -->
 
