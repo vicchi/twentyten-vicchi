@@ -141,7 +141,7 @@ Tags: purple, white, two-columns, fixed-width, custom-header, custom-background,
 
 	<?php else : ?>
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<small><span class="date"><?php the_time ('d') ?></span><br /><?php the_time('M y') ?></span></small>
+			<small><span class="date"><?php the_time ('d') ?></span><br /><?php the_time('M y') ?></small>
 			<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 			<div class="entry-meta">
 				<?php twentyten_posted_on(); ?>
