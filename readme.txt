@@ -2,4 +2,3 @@
 2. Activate the theme. From the Dashboard, navigate to Appearance and then to Themes and click on the "Activate" link under the entry for Twenty Ten - Vicchi
 3. The theme supports custom header image rotation. For this version this is currently hardcoded but may be configurable in a later release.
 4. All header images should be in JPG format and placed in the /wp-content/themes/twentyten-vicchi/images/headers folder. Each header image should be sized at 940x198 (if they're larger they'll be scaled) and also have a thumbnail version, sized at 230x48 with '-thumbnail' appended to the image name.
-5. Once you have your images in place, install and activate the Twenty Ten Header Rotator plugin (http://wordpress.org/extend/plugins/twenty-ten-header-rotator/) and you should be good to go.

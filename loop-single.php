@@ -7,7 +7,7 @@ Description: Child theme for www.vicchi.org, extending the WordPress Twenty Ten 
 Author: Gary Gale
 Author URI: http://www.garygale.com/
 Template: twentyten
-Version: 1.0.0
+Version: 1.0.1
 License: GNU General Public License
 License URI: license.txt
 Tags: purple, white, two-columns, fixed-width, custom-header, custom-background, threaded-comments, sticky-post, translation-ready, microformats, rtl-language-support, editor-style, custom-menu
