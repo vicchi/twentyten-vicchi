@@ -102,3 +102,6 @@ Tags: purple, white, two-columns, fixed-width, custom-header, custom-background,
 	</div><!-- #header -->
 
 	<div id="main">
+		<?php if (function_exists ('yoast_breadcrumb')) {
+			yoast_breadcrumb ('<p id="breadcrumbs">', '</p>');
+		}?>

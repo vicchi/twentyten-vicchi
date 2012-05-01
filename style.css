@@ -66,7 +66,11 @@ a:hover {
 	color: #6E6E8C;
 }
 
-#content h1, #content h2, #content h3, #content h4, #content h5, #content h6 {
+#breadcrumbs {
+	margin-left: 20px;
+}
+
+#content h1, #content h2, #content h3, #content h4, #content h5, #content h6, #breadcrumbs {
 	font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
 	color: #51518C;
 }
