@@ -60,29 +60,40 @@ function twentyten_setup() {
 	));
 
 	// This theme allows users to set a custom background
-	add_custom_background ();
+	add_theme_support ('custom-background', array ('default-color' => 'f1f1f1'));
 
-	// Your changeable header business starts here
-	define ('HEADER_TEXTCOLOR', '');
-	// No CSS, just IMG call. The %s is a placeholder for the theme template directory URI.
-	define ('HEADER_IMAGE', '%s/images/headers/path.jpg');
-
-	// The height and width of your custom header. You can hook into the theme's own filters to change these values.
-	// Add a filter to twentyten_header_image_width and twentyten_header_image_height to change these values.
-	define ('HEADER_IMAGE_WIDTH', apply_filters ('twentyten_header_image_width', 940));
-	define ('HEADER_IMAGE_HEIGHT', apply_filters ('twentyten_header_image_height', 198));
+	$custom_header_support = array(
+		// The default image to use.
+		// The %s is a placeholder for the theme template directory URI.
+		'default-image' => '%s/images/headers/path.jpg',
+		// The height and width of our custom header.
+		'width' => apply_filters( 'twentyten_header_image_width', 940 ),
+		'height' => apply_filters( 'twentyten_header_image_height', 198 ),
+		// Support flexible heights.
+		'flex-height' => true,
+		// Don't support text inside the header image.
+		'header-text' => false,
+		// Callback for styling the header preview in the admin.
+		'admin-head-callback' => 'twentyten_admin_header_style',
+	);
+	
+	add_theme_support( 'custom-header', $custom_header_support );
+	
+	if ( ! function_exists( 'get_custom_header' ) ) {
+		// This is all for compatibility with versions of WordPress prior to 3.4.
+		define( 'HEADER_TEXTCOLOR', '' );
+		define( 'NO_HEADER_TEXT', true );
+		define( 'HEADER_IMAGE', $custom_header_support['default-image'] );
+		define( 'HEADER_IMAGE_WIDTH', $custom_header_support['width'] );
+		define( 'HEADER_IMAGE_HEIGHT', $custom_header_support['height'] );
+		add_custom_image_header( '', $custom_header_support['admin-head-callback'] );
+		add_custom_background();
+	}
 
 	// We'll be using post thumbnails for custom header images on posts and pages.
 	// We want them to be 940 pixels wide by 198 pixels tall.
 	// Larger images will be auto-cropped to fit, smaller ones will be ignored. See header.php.
-	set_post_thumbnail_size (HEADER_IMAGE_WIDTH, HEADER_IMAGE_HEIGHT, true);
-
-	// Don't support text inside the header image.
-	define ('NO_HEADER_TEXT', true);
-
-	// Add a way for the custom header to be styled in the admin panel that controls
-	// custom headers. See twentyten_admin_header_style(), below.
-	add_custom_image_header ('', 'twentyten_admin_header_style');
+	set_post_thumbnail_size( $custom_header_support['width'], $custom_header_support['height'], true );
 
 	// ... and thus ends the changeable header business.
 
