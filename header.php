@@ -38,7 +38,7 @@ Tags: purple, white, two-columns, fixed-width, custom-header, custom-background,
 	bloginfo( 'name' );
 
 	// Add the blog description for the home/front page.
-	$site_description = get_bloginfo( 'description', 'display' );
+	$site_description = get_bloginfo( 'description', 'Display' );
 	if ( $site_description && ( is_home() || is_front_page() ) )
 		echo " | $site_description";
 
@@ -74,7 +74,7 @@ Tags: purple, white, two-columns, fixed-width, custom-header, custom-background,
 				<?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
 				<<?php echo $heading_tag; ?> id="site-title">
 					<span>
-						<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+						<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'Display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 					</span>
 				</<?php echo $heading_tag; ?>>
 				<div id="site-description"><?php bloginfo( 'description' ); ?></div>

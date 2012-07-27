@@ -51,7 +51,7 @@ get_header(); ?>
 					?>
 						<li>
 							<strong>Try searching</strong> for the piece of bloggage:
-							<form style="display:inline;" action="<?php bloginfo('siteurl');?>">
+							<form style="display:inline;" action="<?php bloginfo('url');?>">
 								<input type="text" value="<?php echo esc_attr($s); ?>" id="s" name="s"/> <input type="submit" value="Search"/>
 							</form>
 						</li>
@@ -60,7 +60,7 @@ get_header(); ?>
 
 						</li>
 						<li>
-							<strong>Give up, start all over again</strong> on the <a href="<?php bloginfo('siteurl');?>">homepage</a> (and please contact me to say what went wrong, so I can fix it).
+							<strong>Give up, start all over again</strong> on the <a href="<?php bloginfo('url');?>">homepage</a> (and please contact me to say what went wrong, so I can fix it).
 						</li>
 					</ol>
 					<div class="credits">Failing Street photo credit: <a href="http://www.flickr.com/photos/cjdaniel/3312922051/">Chris Daniel</a> on Flickr.</div>
