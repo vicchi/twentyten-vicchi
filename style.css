@@ -167,3 +167,15 @@ small {
 #site-info, #site-generator {
 	font-size: 9px;
 }
+
+#page-links {
+	font-size: 12px;
+}
+
+.prev-page-link {
+	float: left;
+}
+
+.next-page-link {
+	float: right;
+}
