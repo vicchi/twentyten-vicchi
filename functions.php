@@ -128,4 +128,114 @@ function twentyten_setup() {
 endif;
 
 remove_action ('wp_head', 'wp_generator');
+
+//add_action ('the_content', 'add_category_biography_box');
+// If you theme uses post excerpts in archive pages, then uncomment the next line
+//add_action ('the_excerpt', 'add_category_biography_box');
+/*function add_category_biography_box ($content) {
+	// The category name or slug you want the Biography Box to appear with
+	// If you want to do this for multiple categories, pass an array as in
+	// $category = array ('category1', 'category2', ...);
+	$category = "Articles";
+	
+	if (has_category ($category)) {
+		$content .= do_shortcode ("[wp_biographia]");
+	}
+	
+	return $content;
+}*/
+
+//add_action ('wp_enqueue_scripts', 'add_custom_css');
+/*function add_custom_css () {
+	$uri = get_stylesheet_directory_uri ();
+	wp_enqueue_style ('custom-css', $uri . '/custom.css');
+}*/
+
+//add_action ('deprecated_argument_run', 'deprecated_argument_run', 10, 3);
+//add_action ('deprecated_function_run', 'deprecated_function_run', 10, 3);
+
+/*function deprecated_argument_run ($function, $message, $version) {
+	error_log ('Deprecated Argument Detected');
+	$trace = debug_backtrace ();
+	foreach ($trace as $frame) {
+		error_log (var_export ($frame, true));
+	}
+}*/
+
+/*function deprecated_function_run ($function, $message, $version) {
+	error_log ('Deprecated Function Detected');
+	$trace = debug_backtrace ();
+	foreach ($trace as $frame) {
+		error_log (var_export ($frame, true));
+	}
+}*/
+
+//add_filter ('wp_biographia_contact_info', 'add_pinterest_support');
+/*function add_pinterest_support ($contacts) {
+	// contacts = array (field => array (field => field-name, contactmethod => description))
+	$contacts['pinterest'] = array (
+		'field' => 'pinterest',
+		'contactmethod' => __('Pinterest')
+	);
+
+	return $contacts;
+}*/
+
+//add_filter ('wp_biographia_link_items', 'add_pinterest_link', 10, 2);
+/*function add_pinterest_link ($links, $icon_dir_url) {
+	// links = array (field => array (link_title => title, link_text => text, link_icon => URL)
+	$links['pinterest'] = array (
+		'link_title' => __('Pinterest'),
+		'link_text' => __('Pinterest'),
+		'link_icon' => $icon_dir_url . 'web.png'
+	);
+
+	return $links;
+}*/
+
+//add_filter ('wp_biographia_content_title', 'show_content_title', 10, 3);
+/*function show_content_title ($title, $prefix, $name) {
+	error_log ('show_content_title++');
+	error_log ('prefix: ' . $prefix);
+	error_log ('name: ' . $name);
+	return $title;
+}*/
+
+//add_filter ('wp_biographia_link_item', 'filter_link_item', 10, 2);
+/*function filter_link_item ($content, $params) {
+	// $params = array (
+	//		'type' => 'link type (icon|text)',
+	//		'format' => 'link format string',
+	//		'meta' => 'additional anchor attributes',
+	//		'title' => 'link title',
+	//		'url' => 'link URL',
+	//		'body' => 'link body text',
+	//		'link-class' => 'link CSS class name',
+	//		'item-class' => 'link item CSS class name (icons only)'
+	//	);
+	
+	$site_url = site_url ();
+	$pos = strpos ($params['url'], $site_url);
+	if ($pos !== false) {
+		$params['meta'] = 'target="_blank"';
+	}
+	
+	if ($params['type'] === 'icon') {
+		$content = sprintf ($params['format'], $params['url'], $params['meta'], $params['title'], $params['link-class'], $params['body'], $params['item-class']);
+	}
+	
+	else {
+		$content = sprintf ($params['format'], $params['url'], $params['meta'], $params['title'], $params['link-class'], $params['body']);
+	}
+
+	return $content;
+}*/
+
+remove_filter ('pre_user_description', 'wp_filter_kses');
+add_filter('pre_user_description', 'wp_filter_post_kses');
+add_filter('pre_user_description', 'wptexturize');
+add_filter('pre_user_description', 'wpautop');
+add_filter('pre_user_description', 'convert_chars');
+add_filter('pre_user_description', 'balanceTags', 50);
+
 ?>
