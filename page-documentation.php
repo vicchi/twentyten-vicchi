@@ -22,7 +22,10 @@ function vicchi_page_links () {
 	if (function_exists ('previous_page_link_plus') && function_exists ('next_page_link_plus')) {
 		$prev_format = '&larr;%link';
 		$next_format = '%link&rarr;';
-		$args = array ('format' => $prev_format, 'return' => 'output');
+		$args = array ('format' => $prev_format,
+			'loop' => true,
+			'order_by' => 'menu_order',
+			'return' => 'output');
 		$content = array ();
 		$content[] = '<div id="page-links">';
 		$content[] = '<span class="prev-page-link">';
